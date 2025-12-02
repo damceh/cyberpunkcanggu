@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="About Us - Our Story & Mission"
+  description="Learn about Cyberpunk Canggu, Bali's premier 24/7 gaming lounge. Our mission: providing the ultimate gaming experience with top-tier hardware and exceptional service."
+>
+  <Navigation />
+  
+  <main class="pt-20">
+    <!-- Header -->
+    <section class="section bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark">
+      <div class="container-custom text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          About <span class="text-neon">Cyberpunk</span> Canggu
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Where passion for gaming meets premium quality
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Cyberpunk Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Why <span class="text-neon-pink">Cyberpunk</span>?
+            </h2>
+            <div class="space-y-6 text-lg text-gray-300">
+              <p>
+                Cyberpunk Canggu was born from a simple frustration: the lack of professional gaming venues in Bali that truly understand what gamers need.
+              </p>
+              <p>
+                We're not just another internet cafe. We're <span class="text-white font-semibold">gamers building for gamers</span> - people who understand the importance of low latency, high refresh rates, and comfortable marathon gaming sessions.
+              </p>
+              <p>
+                Whether you're a <span class="text-cyber-neon-blue font-semibold">competitive esports player</span> grinding ranked matches, a <span class="text-cyber-neon-blue font-semibold">content creator</span> streaming to thousands, or a <span class="text-cyber-neon-blue font-semibold">casual gamer</span> exploring new worlds - we've created the perfect environment for you.
+              </p>
+            </div>
+          </div>
+          <div class="order-first lg:order-last">
+            <div class="aspect-square bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Our <span class="text-neon">Mission</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Building Bali's premier gaming community
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Premium Quality</h3>
+            <p class="text-gray-400">
+              Only the best hardware, fastest internet, and most comfortable environment. No compromises.
+            </p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Community First</h3>
+            <p class="text-gray-400">
+              Building a welcoming space where gamers connect, compete, and create memories together.
+            </p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Always Available</h3>
+            <p class="text-gray-400">
+              Game on your schedule. Open 24/7, 365 days a year. Because gamers don't sleep on a schedule.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Our <span class="text-neon-pink">Values</span>
+          </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-3 text-cyber-neon-blue">Quality Over Everything</h3>
+            <p class="text-gray-400">
+              We never cut corners. From our RTX 40 series GPUs to our mechanical keyboards, every piece of equipment is chosen for performance and reliability.
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-3 text-cyber-neon-blue">Transparent Pricing</h3>
+            <p class="text-gray-400">
+              No hidden fees, no surprise charges. What you see is what you pay. Simple, fair pricing that respects your budget.
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-3 text-cyber-neon-blue">Continuous Improvement</h3>
+            <p class="text-gray-400">
+              We're constantly upgrading our hardware, expanding our game library, and listening to community feedback to make Cyberpunk Canggu better every day.
+            </p>
+          </div>
+          
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-3 text-cyber-neon-blue">Respect & Inclusivity</h3>
+            <p class="text-gray-400">
+              Everyone is welcome here. We maintain a friendly, professional environment where all gamers can feel comfortable and focus on what matters - the game.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Find Us in <span class="text-neon">Canggu</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-6">
+              Located in the heart of Canggu, Bali's digital nomad hub, we're easily accessible from anywhere in the area.
+            </p>
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>5 minutes from Echo Beach</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Walking distance to popular cafes and coworking spaces</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Ample parking for motorcycles and cars</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="/contact" class="btn-primary">Get Directions</a>
+            </div>
+          </div>
+          <div>
+            <div class="aspect-video bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20">
+      <div class="container-custom text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Join Our <span class="text-neon">Community</span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Experience what makes Cyberpunk Canggu Bali's best gaming lounge
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://wa.me/+6281234567890" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">
+            Book Now
+          </a>
+          <a href="/contact" class="btn-secondary text-lg px-8 py-4">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

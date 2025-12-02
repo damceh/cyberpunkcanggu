@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pcGames = [
+  'Counter-Strike 2', 'Valorant', 'League of Legends', 'Dota 2', 'Apex Legends',
+  'Fortnite', 'Call of Duty: Warzone', 'Overwatch 2', 'Rainbow Six Siege', 'PUBG',
+  'Cyberpunk 2077', 'Elden Ring', 'Red Dead Redemption 2', 'GTA V', 'Minecraft',
+  'Starfield', 'Baldur\'s Gate 3', 'Diablo IV', 'Path of Exile', 'Lost Ark',
+  'World of Warcraft', 'Final Fantasy XIV', 'Black Desert Online', 'New World', 'Guild Wars 2',
+  'Destiny 2', 'Warframe', 'The Division 2', 'Battlefield 2042', 'Escape from Tarkov',
+  'Rust', 'ARK: Survival Evolved', 'Palworld', 'V Rising', 'Valheim',
+  'Sea of Thieves', 'No Man\'s Sky', 'Elite Dangerous', 'Star Citizen', 'DayZ',
+  'The Forest', 'Sons of the Forest', 'Phasmophobia', 'Lethal Company', 'Dead by Daylight',
+  'Rocket League', 'FIFA 24', 'NBA 2K24', 'F1 24', 'Assetto Corsa Competizione',
+].sort();
+
+const ps5Games = [
+  'Spider-Man 2', 'God of War Ragnarök', 'Horizon Forbidden West', 'The Last of Us Part II', 'Ratchet & Clank: Rift Apart',
+  'Gran Turismo 7', 'Returnal', 'Demon\'s Souls', 'Ghost of Tsushima', 'Uncharted: Legacy of Thieves',
+  'Final Fantasy XVI', 'Resident Evil 4 Remake', 'Street Fighter 6', 'Tekken 8', 'Mortal Kombat 1',
+  'NBA 2K24', 'FIFA 24 (EA Sports FC 24)', 'Madden NFL 24', 'MLB The Show 23', 'WWE 2K24',
+  'Call of Duty: Modern Warfare III', 'Battlefield 2042', 'Rainbow Six Siege', 'Apex Legends', 'Fortnite',
+  'Baldur\'s Gate 3', 'Hogwarts Legacy', 'Elden Ring', 'Cyberpunk 2077', 'Red Dead Redemption 2',
+  'Assassin\'s Creed Mirage', 'Star Wars Jedi: Survivor', 'Diablo IV', 'Destiny 2', 'Warframe',
+  'Spider-Man: Miles Morales', 'Sackboy: A Big Adventure', 'Astro\'s Playroom', 'Kena: Bridge of Spirits', 'Stray',
+  'It Takes Two', 'A Way Out', 'Overcooked! All You Can Eat', 'Fall Guys', 'Rocket League',
+  'Minecraft', 'Terraria', 'No Man\'s Sky', 'The Witcher 3', 'Skyrim',
+].sort();
+---
+
+<BaseLayout 
+  title="Games Library - 100+ PC & PS5 Titles"
+  description="Browse our massive game library: 50+ PC games including Valorant, CS2, League of Legends, GTA V, and 50+ PS5 titles like Spider-Man 2, God of War, FIFA 24 at Cyberpunk Canggu."
+  keywords="pc games canggu, ps5 games bali, valorant canggu, cyberpunk 2077 gaming lounge, gaming library bali"
+>
+  <Navigation />
+  
+  <main class="pt-20">
+    <!-- Header -->
+    <section class="section bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark">
+      <div class="container-custom text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Games <span class="text-neon">Library</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Over 100 AAA titles and indie gems across PC and PS5
+        </p>
+        <div class="flex justify-center space-x-8 mt-8">
+          <div>
+            <div class="text-4xl font-bold text-neon">{pcGames.length}+</div>
+            <div class="text-gray-400">PC Games</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold text-neon-pink">{ps5Games.length}+</div>
+            <div class="text-gray-400">PS5 Games</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PC Games -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            PC <span class="text-neon">Games</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            From competitive esports to immersive RPGs - we have it all
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {pcGames.map(game => (
+            <div class="card hover:border-cyber-neon-blue transition-colors">
+              <div class="text-white font-medium text-sm">{game}</div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-8 p-6 bg-cyber-gray rounded-lg border border-cyber-neon-blue/30">
+          <p class="text-gray-300 text-center">
+            <span class="text-cyber-neon-blue font-semibold">Don't see your game?</span> We can install most games on request. Just ask our staff!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PS5 Games -->
+    <section class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            PS5 <span class="text-neon-pink">Games</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            Exclusive PlayStation titles and the latest releases
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {ps5Games.map(game => (
+            <div class="card hover:border-cyber-neon-pink transition-colors">
+              <div class="text-white font-medium text-sm">{game}</div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-8 p-6 bg-cyber-dark rounded-lg border border-cyber-neon-pink/30">
+          <p class="text-gray-300 text-center">
+            <span class="text-cyber-neon-pink font-semibold">Library constantly updated!</span> We add new releases regularly. Check with staff for the latest additions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Popular <span class="text-neon">Categories</span>
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card text-center">
+            <div class="text-cyber-neon-blue text-5xl font-bold mb-2">🎯</div>
+            <h3 class="text-xl font-bold mb-2">Competitive FPS</h3>
+            <p class="text-gray-400 text-sm">CS2, Valorant, Apex Legends, Rainbow Six</p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="text-cyber-neon-blue text-5xl font-bold mb-2">⚔️</div>
+            <h3 class="text-xl font-bold mb-2">RPG & Adventure</h3>
+            <p class="text-gray-400 text-sm">Elden Ring, Baldur's Gate 3, Cyberpunk 2077</p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="text-cyber-neon-blue text-5xl font-bold mb-2">🏆</div>
+            <h3 class="text-xl font-bold mb-2">Esports</h3>
+            <p class="text-gray-400 text-sm">League of Legends, Dota 2, CS2</p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="text-cyber-neon-blue text-5xl font-bold mb-2">🎮</div>
+            <h3 class="text-xl font-bold mb-2">Sports & Racing</h3>
+            <p class="text-gray-400 text-sm">FIFA 24, Gran Turismo 7, F1 24</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20">
+      <div class="container-custom text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Start <span class="text-neon">Playing</span> Today
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Book your session and dive into our massive game library
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://wa.me/+6281234567890" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">
+            Book Now
+          </a>
+          <a href="/pricelist" class="btn-secondary text-lg px-8 py-4">
+            View Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

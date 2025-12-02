@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pcSpecs = [
+  { label: 'Processor', value: 'Intel Core i9-14900K / AMD Ryzen 9 7950X' },
+  { label: 'Graphics Card', value: 'NVIDIA RTX 4080 / 4090' },
+  { label: 'RAM', value: '32GB DDR5 6000MHz' },
+  { label: 'Storage', value: '2TB NVMe Gen4 SSD' },
+  { label: 'Motherboard', value: 'High-end Z790 / X670E' },
+  { label: 'Cooling', value: 'AIO Liquid Cooling' },
+];
+
+const peripherals = [
+  { name: 'Keyboard', brand: 'Razer / Logitech', model: 'Mechanical RGB' },
+  { name: 'Mouse', brand: 'Logitech / Razer', model: 'Pro Gaming 25K DPI' },
+  { name: 'Headset', brand: 'HyperX / SteelSeries', model: '7.1 Surround Sound' },
+  { name: 'Monitor', brand: 'ASUS / Samsung', model: '27" 240Hz 1ms' },
+  { name: 'Chair', brand: 'Secretlab / Herman Miller', model: 'Ergonomic Gaming' },
+];
+
+const networkSpecs = [
+  { label: 'Download Speed', value: '1 Gbps' },
+  { label: 'Upload Speed', value: '500 Mbps' },
+  { label: 'Latency', value: '<10ms' },
+  { label: 'Provider', value: 'Fiber Optic Connection' },
+];
+---
+
+<BaseLayout 
+  title="Gaming Gear & Setup - Premium Hardware Specs"
+  description="Discover our premium gaming setup: RTX 4080/4090 GPUs, Intel i9/Ryzen 9 CPUs, 240Hz monitors, mechanical keyboards, and 1Gbps fiber internet at Cyberpunk Canggu."
+  keywords="gaming pc specs canggu, rtx 4090 gaming lounge, ps5 rental bali, gaming gear canggu, high performance gaming pc"
+>
+  <Navigation />
+  
+  <main class="pt-20">
+    <!-- Header -->
+    <section class="section bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark">
+      <div class="container-custom text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Gaming <span class="text-neon">Gear</span> & Setup
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Experience gaming with cutting-edge hardware and professional-grade peripherals
+        </p>
+      </div>
+    </section>
+
+    <!-- PC Specs -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            High-Performance <span class="text-neon">Gaming PCs</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            Built for competitive gaming, streaming, and maximum performance
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pcSpecs.map(spec => (
+            <div class="card">
+              <div class="text-cyber-neon-blue font-semibold text-sm uppercase tracking-wider mb-2">
+                {spec.label}
+              </div>
+              <div class="text-white text-lg font-medium">
+                {spec.value}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Peripherals -->
+    <section class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Pro-Grade <span class="text-neon-pink">Peripherals</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            Every detail matters for competitive edge
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {peripherals.map(peripheral => (
+            <div class="card">
+              <div class="flex items-start justify-between mb-3">
+                <div class="text-cyber-neon-pink font-semibold text-lg">
+                  {peripheral.name}
+                </div>
+              </div>
+              <div class="text-gray-300 text-sm mb-1">
+                Brand: <span class="text-white">{peripheral.brand}</span>
+              </div>
+              <div class="text-gray-300 text-sm">
+                Model: <span class="text-white">{peripheral.model}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PS5 Setup -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="aspect-video bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              PlayStation 5 <span class="text-neon">Setup</span>
+            </h2>
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300"><span class="text-white font-semibold">Latest PS5 Consoles</span> with ultra-high-speed SSD</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300"><span class="text-white font-semibold">4K HDR Gaming Displays</span> for stunning visuals</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300"><span class="text-white font-semibold">DualSense Controllers</span> with haptic feedback</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300"><span class="text-white font-semibold">Premium Sound System</span> for immersive audio</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300"><span class="text-white font-semibold">Comfortable Gaming Chairs</span> for extended sessions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Network & Connectivity -->
+    <section class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Network & <span class="text-neon">Connectivity</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            Lightning-fast, ultra-low latency connection for competitive gaming
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {networkSpecs.map(spec => (
+            <div class="card text-center">
+              <div class="text-5xl font-bold text-neon mb-3">
+                {spec.value}
+              </div>
+              <div class="text-gray-400 uppercase text-sm tracking-wider">
+                {spec.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Premium <span class="text-neon-pink">Amenities</span>
+          </h2>
+          <p class="text-xl text-gray-400">
+            Everything you need for the ultimate gaming experience
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Air Conditioning</h3>
+            <p class="text-gray-400">Stay cool and comfortable with powerful AC in every zone</p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">24/7 Operation</h3>
+            <p class="text-gray-400">Game whenever you want - we never close</p>
+          </div>
+          
+          <div class="card text-center">
+            <div class="flex justify-center mb-4">
+              <svg class="w-16 h-16 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Friendly Staff</h3>
+            <p class="text-gray-400">Knowledgeable team ready to assist you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20">
+      <div class="container-custom text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Experience the <span class="text-neon">Hardware</span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Book now and game on the best equipment in Bali
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/pricelist" class="btn-primary text-lg px-8 py-4">
+            View Pricing
+          </a>
+          <a href="https://wa.me/+6281234567890" target="_blank" rel="noopener noreferrer" class="btn-secondary text-lg px-8 py-4">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

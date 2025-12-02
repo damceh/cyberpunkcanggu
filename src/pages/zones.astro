@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappLink = 'https://wa.me/+6281234567890';
+---
+
+<BaseLayout 
+  title="Gaming Zones - VIP, Main Zone & PS5 Rooms"
+  description="Explore our premium gaming zones: VIP private area, Main Zone with high-end PCs, and dedicated PS5 rooms. Choose your perfect gaming environment at Cyberpunk Canggu."
+>
+  <Navigation />
+  
+  <main class="pt-20">
+    <!-- Header -->
+    <section class="section bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark">
+      <div class="container-custom text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Our <span class="text-neon">Gaming</span> Zones
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          From competitive setups to casual gaming lounges, find your perfect space
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Zone -->
+    <section id="main" class="section">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="inline-block px-4 py-2 bg-cyber-neon-blue/10 border border-cyber-neon-blue rounded-full text-cyber-neon-blue text-sm font-semibold mb-4">
+              MOST POPULAR
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Main <span class="text-neon">Zone</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-6">
+              Our main gaming area features high-performance PCs perfect for competitive gaming, streaming, and immersive gameplay.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">RTX 40 Series Graphics Cards</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Latest Intel/AMD Processors</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">32GB RAM for smooth multitasking</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">144Hz+ Gaming Monitors</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Pro-grade Mechanical Keyboards & Mice</span>
+              </li>
+            </ul>
+            <a href="/pricelist#main" class="btn-primary">View Pricing</a>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="aspect-video bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP Zone -->
+    <section id="vip" class="section bg-cyber-gray">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="aspect-video bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="inline-block px-4 py-2 bg-cyber-neon-pink/10 border border-cyber-neon-pink rounded-full text-cyber-neon-pink text-sm font-semibold mb-4">
+              PREMIUM
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              VIP <span class="text-neon-pink">Zone</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-6">
+              Experience ultimate privacy and premium comfort in our exclusive VIP area. Perfect for teams, streamers, or those seeking a more private gaming session.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-pink flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Private gaming area</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-pink flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Top-of-the-line hardware</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-pink flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Premium seating and ambiance</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-neon-pink flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Ideal for groups and team gaming</span>
+              </li>
+            </ul>
+            <a href="/pricelist#vip" class="btn-secondary">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PS5 Room -->
+    <section id="ps5" class="section">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="inline-block px-4 py-2 bg-cyber-purple/10 border border-cyber-purple rounded-full text-cyber-purple text-sm font-semibold mb-4">
+              CONSOLE GAMING
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              PS5 <span class="text-neon">Rooms</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-6">
+              Dedicated console gaming rooms featuring the latest PlayStation 5 with an extensive game library and comfortable seating.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Latest PS5 consoles</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">100+ PS5 game titles</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">4K HDR Gaming Displays</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Comfortable lounge seating</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-cyber-purple flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-300">Private room options</span>
+              </li>
+            </ul>
+            <a href="/pricelist#ps5" class="btn-primary">View Pricing</a>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="aspect-video bg-cyber-gray-light rounded-lg overflow-hidden flex items-center justify-center">
+              <svg class="w-32 h-32 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section bg-gradient-to-r from-cyber-purple/20 to-cyber-pink/20">
+      <div class="container-custom text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Book Your <span class="text-neon">Zone</span> Now
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Reserve your gaming session and experience the best setup in Canggu
+        </p>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">
+          Contact Us on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
