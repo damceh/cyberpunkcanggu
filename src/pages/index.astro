@@ -2,49 +2,43 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import Marquee from '../components/Marquee.astro';
 
 const whatsappNumber = '+6281234567890';
 const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
-const features = [
-  {
-    icon: 'clock',
-    title: 'Open 24/7',
-    description: 'Game anytime, day or night. We never close.',
-  },
-  {
-    icon: 'cpu',
-    title: 'Premium Hardware',
-    description: 'Top-tier gaming PCs and PS5s with pro peripherals.',
-  },
-  {
-    icon: 'wifi',
-    title: 'High-Speed Internet',
-    description: 'Lightning-fast connection for competitive gaming.',
-  },
-  {
-    icon: 'snowflake',
-    title: 'AC Comfort',
-    description: 'Stay cool and comfortable during marathon sessions.',
-  },
+const marqueeItems = [
+  { icon: 'clock', text: 'Open 24/7' },
+  { icon: 'cpu', text: 'RTX 40 Series GPUs' },
+  { icon: 'wifi', text: 'High-Speed Internet' },
+  { icon: 'snowflake', text: 'Full AC Comfort' },
+  { icon: 'gamepad', text: '100+ Games Library' },
+  { icon: 'monitor', text: '144Hz+ Displays' },
+  { icon: 'star', text: 'Premium Experience' },
 ];
 
 const zones = [
   {
     name: 'Main Zone',
-    description: 'High-performance gaming PCs perfect for competitive and casual gaming',
+    badge: 'Popular',
+    description: 'High-performance PCs for competitive and casual gaming',
+    specs: ['RTX 40 Series', '32GB RAM', '144Hz Monitors'],
     image: '/images/main-zone.jpg',
     href: '/zones#main',
   },
   {
     name: 'VIP Zone',
-    description: 'Premium private gaming experience with exclusive setup',
+    badge: 'Premium',
+    description: 'Private gaming area with exclusive premium setup',
+    specs: ['Private Room', 'Top Hardware', 'Team Gaming'],
     image: '/images/vip-zone.jpg',
     href: '/zones#vip',
   },
   {
     name: 'PS5 Room',
-    description: 'Dedicated console gaming rooms with PS5 and massive game library',
+    badge: 'Console',
+    description: 'Dedicated PS5 rooms with massive game library',
+    specs: ['PS5 Console', '4K HDR TV', '100+ Games'],
     image: '/images/ps5-room.jpg',
     href: '/zones#ps5',
   },
@@ -52,147 +46,136 @@ const zones = [
 ---
 
 <BaseLayout 
-  title="Home - Premium 24/7 Gaming Lounge in Canggu, Bali"
+  title="Cyberpunk Canggu - Premium 24/7 Gaming Lounge in Bali"
   description="Experience gaming at Cyberpunk Canggu - Bali's premier 24/7 gaming lounge. High-end PCs, PS5, competitive peripherals, and ultra-fast internet in the heart of Canggu."
 >
   <Navigation />
   
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <!-- Animated Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-cyber-dark via-cyber-gray to-cyber-dark"></div>
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-30"></div>
+  <!-- Hero Section - Clean & Professional -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <!-- Background Image Placeholder -->
+    <div class="absolute inset-0 bg-cyber-dark">
+      <div class="absolute inset-0 bg-gradient-to-b from-cyber-dark/80 via-cyber-dark/60 to-cyber-dark"></div>
+      <!-- Add venue photo here as background when available -->
+      <div class="absolute inset-0 image-placeholder opacity-30"></div>
     </div>
     
-    <div class="container-custom relative z-10 text-center py-20">
-      <div class="max-w-4xl mx-auto space-y-8">
-        <!-- Main Heading -->
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-          <span class="text-neon animate-neon-pulse">LEVEL UP</span>
+    <div class="container-custom relative z-10 text-center py-16">
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 badge badge-gold mb-4">
+          <span class="w-2 h-2 bg-cyber-gold rounded-full animate-pulse-subtle"></span>
+          Now Open in Canggu
+        </div>
+        
+        <!-- Main Heading - Simplified -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+          <span class="text-white">Welcome to</span>
           <br />
-          <span class="text-white">YOUR GAMING</span>
-          <br />
-          <span class="text-neon-pink">EXPERIENCE</span>
+          <span class="text-gradient-primary">Cyberpunk Canggu</span>
         </h1>
         
         <!-- Subheading -->
-        <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-          Bali's Premier 24/7 Gaming Lounge in the Heart of Canggu
+        <p class="text-lg md:text-xl text-gray-400 max-w-xl mx-auto leading-relaxed">
+          Bali's premier 24/7 gaming lounge featuring high-end PCs, PS5 rooms, and an unmatched gaming atmosphere
         </p>
         
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">
-            <svg class="w-6 h-6 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="btn-primary text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
             </svg>
-            Book Now on WhatsApp
+            Book Now
           </a>
-          <a href="/pricelist" class="btn-secondary text-lg px-8 py-4">
+          <a href="/pricelist" class="btn-secondary text-base">
             View Pricing
           </a>
-        </div>
-        
-        <!-- Quick Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-neon">100+</div>
-            <div class="text-sm text-gray-400 mt-1">Games</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-neon-pink">24/7</div>
-            <div class="text-sm text-gray-400 mt-1">Always Open</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-neon">RTX 40</div>
-            <div class="text-sm text-gray-400 mt-1">Series GPUs</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-neon-pink">PS5</div>
-            <div class="text-sm text-gray-400 mt-1">Consoles</div>
-          </div>
         </div>
       </div>
     </div>
     
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
+        <div class="w-1.5 h-3 bg-cyber-gold rounded-full animate-float"></div>
+      </div>
     </div>
   </section>
+  
+  <!-- Marquee Strip - Features -->
+  <Marquee items={marqueeItems} />
 
-  <!-- Features Section -->
-  <section class="section bg-cyber-gray">
+  <!-- About Section - Clean intro -->
+  <section class="section">
     <div class="container-custom">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
-        Why <span class="text-neon">Cyberpunk</span> Canggu?
-      </h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map(feature => (
-          <div class="card text-center">
-            <div class="flex justify-center mb-4">
-              {feature.icon === 'clock' && (
-                <svg class="w-12 h-12 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              )}
-              {feature.icon === 'cpu' && (
-                <svg class="w-12 h-12 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                </svg>
-              )}
-              {feature.icon === 'wifi' && (
-                <svg class="w-12 h-12 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
-                </svg>
-              )}
-              {feature.icon === 'snowflake' && (
-                <svg class="w-12 h-12 text-cyber-neon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                </svg>
-              )}
-            </div>
-            <h3 class="text-xl font-bold mb-2">{feature.title}</h3>
-            <p class="text-gray-400">{feature.description}</p>
-          </div>
-        ))}
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Your New Home for <span class="text-neon">Gaming</span>
+        </h2>
+        <p class="text-lg text-gray-400 leading-relaxed mb-8">
+          Experience gaming like never before. Our lounge features cutting-edge equipment, 
+          comfortable seating, and an atmosphere designed for gamers of all levels. 
+          Whether you're here for competitive play or casual sessions, we've got you covered.
+        </p>
+        <a href="/about" class="text-cyber-neon-blue hover:text-cyber-gold transition-colors inline-flex items-center gap-2 font-medium">
+          Learn more about us
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Zones Section -->
-  <section class="section">
+  <!-- Zones Section - Refined -->
+  <section class="section bg-cyber-gray">
     <div class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          Choose Your <span class="text-neon-pink">Zone</span>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Gaming Zones
         </h2>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-          From competitive PC gaming to casual console sessions, we have the perfect space for you
+        <p class="text-gray-400 max-w-xl mx-auto">
+          Choose your perfect gaming environment
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {zones.map(zone => (
-          <a href={zone.href} class="card group cursor-pointer">
-            <div class="aspect-video bg-cyber-gray-light rounded-md mb-4 overflow-hidden">
-              <div class="w-full h-full flex items-center justify-center text-gray-600">
-                <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {zones.map((zone, index) => (
+          <a href={zone.href} class="group flex h-full">
+            <div class={`card-image flex flex-col h-full w-full ${index === 1 ? 'border-cyber-gold/30' : 'border-cyber-gray-light'}`}>
+              <!-- Image placeholder - replace with actual venue photos -->
+              <div class="aspect-[4/3] image-placeholder relative overflow-hidden bg-cyber-gray-light/20">
+                <svg class="w-16 h-16 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                 </svg>
+                <!-- Overlay on hover -->
+                <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark/90 via-cyber-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-            </div>
-            <h3 class="text-2xl font-bold mb-2 group-hover:text-cyber-neon-blue transition-colors">{zone.name}</h3>
-            <p class="text-gray-400">{zone.description}</p>
-            <div class="mt-4 flex items-center text-cyber-neon-blue group-hover:translate-x-2 transition-transform">
-              <span class="mr-2">Explore Zone</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
+              
+              <div class="p-5 flex flex-col flex-grow bg-cyber-dark/40 backdrop-blur-sm border-t border-cyber-gray-light/20">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="text-xl font-bold group-hover:text-cyber-neon-blue transition-colors">{zone.name}</h3>
+                  <span class={`badge ${index === 1 ? 'badge-gold' : index === 0 ? 'badge-primary' : 'badge-pink'}`}>
+                    {zone.badge}
+                  </span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 flex-grow">{zone.description}</p>
+                
+                <!-- Specs tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {zone.specs.map(spec => (
+                    <span class="text-xs px-2 py-1 bg-cyber-dark/50 border border-cyber-gray-light rounded text-gray-300">{spec}</span>
+                  ))}
+                </div>
+                
+                <div class="flex items-center text-sm text-cyber-neon-blue group-hover:translate-x-1 transition-transform mt-auto">
+                  <span>View Details</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
             </div>
           </a>
         ))}
@@ -200,21 +183,31 @@ const zones = [
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section bg-gradient-to-br from-cyber-purple/20 via-cyber-gray to-cyber-pink/20">
-    <div class="container-custom text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
-        Ready to <span class="text-neon">Play</span>?
-      </h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        Book your session now and experience the ultimate gaming setup in Canggu
-      </p>
-      <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4 inline-flex items-center space-x-2">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        <span>Contact Us on WhatsApp</span>
-      </a>
+  <!-- CTA Section - Clean -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="bg-gradient-to-r from-cyber-gray-light to-cyber-gray rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+        <!-- Subtle accent -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-neon-blue via-cyber-gold to-cyber-neon-pink"></div>
+        
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">
+          Ready to Level Up?
+        </h2>
+        <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+          Book your gaming session now and experience premium gaming in Canggu
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Book on WhatsApp
+          </a>
+          <a href="/contact" class="btn-secondary">
+            Get Directions
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 

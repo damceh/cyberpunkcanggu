@@ -1,26 +1,23 @@
 ---
 const navLinks = [
-  { name: 'Home', href: '/' },
   { name: 'Zones', href: '/zones' },
-  { name: 'Gear & Setup', href: '/gear' },
-  { name: 'Pricelist', href: '/pricelist' },
+  { name: 'Pricing', href: '/pricelist' },
   { name: 'Games', href: '/games' },
+  { name: 'Gear', href: '/gear' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
 
-const whatsappNumber = '+6281234567890'; // Update with actual number
+const whatsappNumber = '+6281234567890';
 const whatsappLink = `https://wa.me/${whatsappNumber}`;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-dark/95 backdrop-blur-sm border-b border-cyber-gray">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-dark/90 backdrop-blur-md border-b border-cyber-gray-light/50">
   <div class="container-custom">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-3 group">
-        <div class="text-3xl font-bold">
-          <span class="text-neon">CYBER</span><span class="text-neon-pink">PUNK</span>
-        </div>
+      <a href="/" class="flex items-center gap-2 group">
+        <img src="/images/logo.svg" alt="Cyberpunk Canggu" class="h-10 md:h-12 w-auto" />
       </a>
 
       <!-- Desktop Navigation -->
